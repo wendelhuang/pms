@@ -1,0 +1,33 @@
+电费单价: <%= @electric_unit %>元
+<table border='1'>
+  <th>
+    <td>姓名</td>
+    <td>剩余电量</td>
+    <td>剩余电量总价</td>
+  </th>
+  <% @electric_charge.each_with_index do |charge, index| %>
+    <tr>
+      <td><%= index + 1 %></td>
+      <td><%= charge[:name] %></td>
+      <td><%= charge[:remain] %></td>
+      <td><%= charge[:remain] * @electric_unit %></td>
+    </tr>
+  <% end %>
+</table>
+
+水费单价: <%= @water_unit %>元
+<table border='1'>
+  <th>
+    <td>姓名</td>
+    <td>剩余水量</td>
+    <td>剩余水量总价</td>
+  </th>
+  <% @water_charge.each_with_index do |charge, index| %>
+    <tr>
+      <td><%= index + 1 %></td>
+      <td><%= charge[:name] %></td>
+      <td><%= charge[:remain] %></td>
+      <td><%= charge[:remain] * @water_unit %></td>
+    </tr>
+  <% end %>
+</table>
