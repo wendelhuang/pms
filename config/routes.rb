@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'houses/show'
+
+  get 'community/index'
+
+  get 'community/new'
+
+  get 'community/create'
+
+  get 'community/edit'
+
+  get 'community/update'
+  
+  get 'community/show'
+
+  get 'community/destory'
+
   get 'welcome/index'
   get 'welcome/main'
   post 'welcome/login'

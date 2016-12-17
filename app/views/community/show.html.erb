@@ -1,0 +1,26 @@
+<table class='table table-striped'>
+  <thead>
+    <th>楼号</th>
+    <th>单元号</th>
+    <th>房间号</th>
+    <th>房屋面积</th>
+    <th>物业费(元/每平每月)</th>
+    <th>电费(元/每度)</th>
+    <th>水费(元/每立方)</th>
+    <th>操作</th>
+  </thead>
+  <% for i in 0...@houses.length %>
+    <tr>
+      <td><%= @houses[i][:building] %></td>
+      <td><%= @houses[i][:unit] %></td>
+      <td><%= @houses[i][:house] %></td>
+      <td><%= format_number(@houses[i][:area]) %></td>
+      <td><%= format_number(@houses[i][:property_fee]) %></td>
+      <td><%= format_number(@houses[i][:electric_fee]) %></td>
+      <td><%= format_number(@houses[i][:water_fee]) %></td>
+      <td>
+        <%= link_to '查看更多信息', "/houses/show", class: 'btn btn-default' %>
+      </td>
+    </tr>
+ <% end %>
+</table>

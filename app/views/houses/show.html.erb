@@ -1,0 +1,58 @@
+<table class='table table-striped'>
+  <tr>
+    <td>楼号</td>
+    <td><%= @house[:building] %></td>
+  </tr>
+  <tr>
+    <td>单元号</td>
+    <td><%= @house[:unit] %></td>
+  </tr>
+  <tr>
+    <td>房间号</td>
+    <td><%= @house[:house] %></td>
+  </tr>
+  <tr>
+    <td>房屋面积</td>
+    <td><%= @house[:area] %></td>
+  </tr>
+  <tr>
+    <td>户主姓名</td>
+    <td><%= @house[:owner][:name] %></td>
+  </tr>
+  <tr>
+    <td>户主性别</td>
+    <td><%= @house[:owner][:sex] %></td>
+  </tr>
+  <tr>
+    <td>工作单位</td>
+    <td><%= @house[:owner][:job] %></td>
+  </tr>
+  <tr>
+    <td>户主电话</td>
+    <td><%= @house[:owner][:tel] %></td>
+  </tr>
+  <tr>
+    <td>物业费单价</td>
+    <td><%= @house[:property][:fee] %></td>
+  </tr>
+  <tr>
+    <td>物业费缴费起止日期</td>
+    <td><%= @house[:property][:begin] %> - <%= @house[:property][:end] %></td>
+  </tr>
+  <tr>
+    <td>电费单价</td>
+    <td><%= @house[:electric][:fee] %></td>
+  </tr>
+  <tr>
+    <td>剩余电量</td>
+    <td><%= @house[:electric][:left] %></td>
+  </tr>
+  <tr>
+    <td>水费单价</td>
+    <td><%= @house[:water][:fee] %></td>
+  </tr>
+  <tr>
+    <td>已用水量</td>
+    <td><%= @house[:water][:used] %></td>
+  </tr>
+</table>
